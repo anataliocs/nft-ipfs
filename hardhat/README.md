@@ -4,6 +4,8 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
+LW3Punks Contract Address: 0x123139998D450979146C1d02aF387E44965099EB
+
 ```shell
 npx hardhat help
 npx hardhat test
