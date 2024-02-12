@@ -6,17 +6,17 @@ async function main() {
   const metadataURL = "ipfs://QmRBDqaMty128ioXnA26m2TfgiKRDcqynJ26mTDnneQnVp";
   /*
   A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
-  so lw3PunksContract here is a factory for instances of our LW3Punks contract.
+  so spheronDevsContract here is a factory for instances of our LW3Punks contract.
   */
-  const lw3PunksContract = await ethers.getContractFactory("LW3Punks");
+  const spheronDevsContract = await ethers.getContractFactory("SpheronDevs");
 
   // deploy the contract
-  const deployedLW3PunksContract = await lw3PunksContract.deploy(metadataURL);
+  const deployedSpheronDevsContract = await spheronDevsContract.deploy(metadataURL);
 
-  await deployedLW3PunksContract.deployed();
+  await deployedSpheronDevsContract.deployed();
 
   // print the address of the deployed contract
-  console.log("LW3Punks Contract Address:", deployedLW3PunksContract.address);
+  console.log("SpheronDevs Contract Address:", deployedSpheronDevsContract.address);
 }
 
 // Call the main function and catch if there is any error

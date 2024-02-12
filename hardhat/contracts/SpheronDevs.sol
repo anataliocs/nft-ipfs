@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract LW3Punks is ERC721Enumerable, Ownable {
+contract SpheronDevs is ERC721Enumerable, Ownable {
     using Strings for uint256;
     /**
         * @dev _baseTokenURI for computing {tokenURI}. If set, the resulting URI for each
@@ -32,10 +32,10 @@ contract LW3Punks is ERC721Enumerable, Ownable {
 
     /**
         * @dev ERC721 constructor takes in a `name` and a `symbol` to the token collection.
-        * name in our case is `LW3Punks` and symbol is `LW3P`.
-        * Constructor for LW3P takes in the baseURI to set _baseTokenURI for the collection.
+        * name in our case is `SpheronDevs` and symbol is `SPDEVS`.
+        * Constructor for SpheronDevs takes in the baseURI to set _baseTokenURI for the collection.
         */
-    constructor (string memory baseURI) ERC721("LW3Punks", "LW3P") {
+    constructor (string memory baseURI) ERC721("SpheronDevs", "SPDEVS") {
         _baseTokenURI = baseURI;
     }
 

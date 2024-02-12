@@ -4,7 +4,8 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 
 Try running some of the following tasks:
 
-LW3Punks Contract Address: 0x123139998D450979146C1d02aF387E44965099EB
+SpheronDevs Contract Address: 0xa30AeCeFb798591EB422a841f85A88626CC41204
+
 
 ```shell
 npx hardhat help
