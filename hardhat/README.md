@@ -1,6 +1,6 @@
-# Sample Hardhat Project
+# Spheron Devs DAO Membership NFT
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates a Spheron Devs DAO Membership NFT.
 
 Try running some of the following tasks:
 

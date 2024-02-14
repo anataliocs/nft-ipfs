@@ -26,9 +26,9 @@ export default function Home() {
       // Create a new instance of the Contract with a Signer, which allows
       // update methods
       const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, signer);
-      // call the mint from the contract to mint the LW3Punks
+      // call the mint from the contract to mint the SpheronDevs NFT
       const tx = await nftContract.mint({
-        // value signifies the cost of one LW3Punks which is "0.01" eth.
+        // value signifies the cost of one SpheronDevs NFT which is "0.01" eth.
         // We are parsing `0.01` string to ether using the utils library from ethers.js
         value: utils.parseEther("0.01"),
       });
@@ -36,7 +36,7 @@ export default function Home() {
       // wait for the transaction to get mined
       await tx.wait();
       setLoading(false);
-      window.alert("You successfully minted a LW3Punk!");
+      window.alert("You successfully minted a SpheronDevs NFT!");
     } catch (err) {
       console.error(err);
     }
@@ -95,12 +95,7 @@ export default function Home() {
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
 
-    // If user is not connected to the Mumbai network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 80001) {
-      window.alert("Change the network to Mumbai");
-      throw new Error("Change network to Mumbai");
-    }
 
     if (needSigner) {
       const signer = web3Provider.getSigner();
@@ -118,7 +113,7 @@ export default function Home() {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
       web3ModalRef.current = new Web3Modal({
-        network: "mumbai",
+        network: "sepolia",
         providerOptions: {},
         disableInjectedProvider: false,
       });
@@ -162,16 +157,16 @@ export default function Home() {
   return (
       <div>
         <Head>
-          <title>LW3Punks</title>
-          <meta name="description" content="LW3Punks-Dapp" />
+          <title>SpheronDevs NFT</title>
+          <meta name="description" content="SpheronDevsNFT-Dapp" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className={styles.main}>
           <div>
-            <h1 className={styles.title}>Welcome to LW3Punks!</h1>
+            <h1 className={styles.title}>Welcome to Spheron Devs NFT!</h1>
             <div className={styles.description}>
               {/* Using HTML Entities for the apostrophe */}
-              It&#39;s an NFT collection for LearnWeb3 students.
+              It&#39;s an NFT collection for Spheron Devs DAO members.
             </div>
             <div className={styles.description}>
               {tokenIdsMinted}/10 have been minted
@@ -183,7 +178,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className={styles.footer}>Made with &#10084; by LW3Punks</footer>
+        <footer className={styles.footer}>Made with &#10084; by Chris Anatalio @ Spheron</footer>
       </div>
   );
 }
